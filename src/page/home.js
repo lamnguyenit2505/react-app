@@ -5,7 +5,7 @@ import HomeContent from "../components/content/HomeContent";
 const HomeComponent = () => {
   return(
     <div>
-        <Header name="Home" ></Header>
+        <Header></Header>
         <HomeContent></HomeContent>
     </div>
   )

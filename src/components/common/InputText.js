@@ -1,6 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const InputText = (props) => {
+  const [value, setValue] = useState(props.value)
+
+  // useEffect(() => {
+  //   setValue(props.value)
+  // })
 
   const onChangeValue = (e) => {
     const { name, value } = e.target
@@ -14,9 +19,10 @@ const InputText = (props) => {
         id={props.id}
         name={props.name} 
         placeholder={props.placeholder}
-        defaultValue={props.value} 
+        value={value}
         readOnly={props.readOnly}
         onChange={onChangeValue}
+        onKeyUp={onChangeValue}
       />
     </div>
   )

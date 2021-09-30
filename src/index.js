@@ -4,10 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { BrowserRouter as Router, Route, Link, 
- } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, } from "react-router-dom";
 import HomeComponent from './page/home'
 import AboutComponent from './page/about'
+import TestComponent from './page/test'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +15,7 @@ ReactDOM.render(
       <div >
           <Route path="/" exact component={HomeComponent} />
           <Route path="/about" exact component={AboutComponent}/>
+          <Route path="/test" exact component={TestComponent}></Route>
       </div>  
     </Router>
   </React.StrictMode>,
